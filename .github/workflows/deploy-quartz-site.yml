@@ -1,0 +1,43 @@
+name: Deploy Quartz Site
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build Quartz Site with custom config and layout
+        uses: konstfish/quartz-build-action@v1
+        with:
+          source: ./obsidian_notes            # Directory to build from
+          destination: ./_site                # Directory to write output into
+          page_title: title                 # Title of resulting Quartz Page
+          quartz_config: ./quartz_config/quartz.config.ts
+          quartz_layout: ./quartz_config/quartz.layout.ts
+          #quartz_icon: quartz_icon.png       # Optional: Provide the path to custom Quartz Page icon (png)
+          #quartz_banner: quartz_banner.png   # Optional: Provide the path to custom Quartz Page banner (png)
+
+      - name: Verify build folder contents
+        run: |
+          echo "Listing _site folder contents"
+          ls -alh ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
