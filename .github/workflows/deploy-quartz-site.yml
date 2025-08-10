@@ -5,6 +5,11 @@ on:
     branches:
       - deploy
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     name: Build Quartz Site
@@ -48,12 +53,19 @@ jobs:
 
           # 6. Move the built site to the '_site' directory at the repository root.
           echo "Moving built files to destination..."
-          mv ./public ../_site
+          # The upload action expects the artifact in the root, so we create it there.
+          mkdir -p ../_site
+          mv ./public/* ../_site
 
       - name: Verify build folder contents
         run: |
           echo "Listing _site folder contents"
           ls -alh ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   deploy:
     environment:
