@@ -17,38 +17,36 @@ jobs:
       - name: Setup Node.js v22
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # Quartz requires Node.js v22+
+          node-version: '22'
 
       - name: Install and Build Quartz
         run: |
-          # 1. Install the Quartz CLI tool globally on the runner
-          echo "Installing Quartz CLI..."
-          npm install -g quartz-cli@latest
+          # 1. Clone the official Quartz repository, as this contains the build tooling.
+          echo "Cloning Quartz repository..."
+          git clone https://github.com/jackyzha0/quartz.git
 
-          # 2. Create a new, empty Quartz project in a temporary directory.
-          # This command scaffolds the required project structure.
-          echo "Scaffolding new Quartz project..."
-          quartz create quartz-build
+          # 2. Navigate into the cloned directory
+          cd quartz
 
-          # 3. Navigate into the new project directory
-          cd quartz-build
+          # 3. Install the project dependencies
+          echo "Installing dependencies..."
+          npm install
 
           # 4. Replace the default content and configuration with your own files.
-          # These paths are taken directly from your original workflow.
-          echo "Replacing default content with files from ./obsidian_notes..."
+          # The source files are in the parent directory (`../`), which is the root of your repository checkout.
+          echo "Replacing default content with files from ../obsidian_notes/..."
           rm -rf ./content/*
           cp -r ../obsidian_notes/* ./content/
 
-          echo "Replacing default config with files from ./quartz_config/..."
+          echo "Replacing default config with files from ../quartz_config/..."
           cp ../quartz_config/quartz.config.ts ./quartz.config.ts
           cp ../quartz_config/quartz.layout.ts ./quartz.layout.ts
-          
+
           # 5. Build the site. The output is generated in a 'public' directory.
           echo "Building site..."
           npx quartz build
 
           # 6. Move the built site to the '_site' directory at the repository root.
-          # This matches the 'destination' path from your original workflow.
           echo "Moving built files to destination..."
           mv ./public ../_site
 
