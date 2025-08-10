@@ -7,23 +7,51 @@ on:
 
 jobs:
   build:
-    name: build
+    name: Build Quartz Site
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Build Quartz Site with custom config and layout
-        uses: konstfish/quartz-build-action@v1
+      - name: Setup Node.js v22
+        uses: actions/setup-node@v4
         with:
-          source: ./obsidian_notes            # Directory to build from
-          destination: ./_site                # Directory to write output into
-          page_title: title                 # Title of resulting Quartz Page
-          quartz_config: ./quartz_config/quartz.config.ts
-          quartz_layout: ./quartz_config/quartz.layout.ts
-          #quartz_icon: quartz_icon.png       # Optional: Provide the path to custom Quartz Page icon (png)
-          #quartz_banner: quartz_banner.png   # Optional: Provide the path to custom Quartz Page banner (png)
+          node-version: '22' # Quartz requires Node.js v22+
+          cache: 'npm'
+
+      - name: Install and Build Quartz
+        run: |
+          # 1. Install the Quartz CLI tool globally on the runner
+          echo "Installing Quartz CLI..."
+          npm install -g quartz-cli@latest
+
+          # 2. Create a new, empty Quartz project in a temporary directory.
+          # This command scaffolds the required project structure.
+          echo "Scaffolding new Quartz project..."
+          quartz create quartz-build
+
+          # 3. Navigate into the new project directory
+          cd quartz-build
+
+          # 4. Replace the default content and configuration with your own files.
+          # These paths are taken directly from your original workflow.
+          echo "Replacing default content with files from ./obsidian_notes..."
+          rm -rf ./content/*
+          cp -r ../obsidian_notes/* ./content/
+
+          echo "Replacing default config with files from ./quartz_config/..."
+          cp ../quartz_config/quartz.config.ts ./quartz.config.ts
+          cp ../quartz_config/quartz.layout.ts ./quartz.layout.ts
+          
+          # 5. Build the site. The output is generated in a 'public' directory.
+          echo "Building site..."
+          npx quartz build
+
+          # 6. Move the built site to the '_site' directory at the repository root.
+          # This matches the 'destination' path from your original workflow.
+          echo "Moving built files to destination..."
+          mv ./public ../_site
 
       - name: Verify build folder contents
         run: |
