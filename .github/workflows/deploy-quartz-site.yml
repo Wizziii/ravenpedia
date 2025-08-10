@@ -34,9 +34,9 @@ jobs:
 
           # 4. Replace the default content and configuration with your own files.
           # The source files are in the parent directory (`../`), which is the root of your repository checkout.
-          echo "Replacing default content with files from ../obsidian_notes/..."
+          echo "Replacing default content with files from ../ravenpedia/..."
           rm -rf ./content/*
-          cp -r ../obsidian_notes/* ./content/
+          cp -r ../ravenpedia/* ./content/
 
           echo "Replacing default config with files from ../quartz_config/..."
           cp ../quartz_config/quartz.config.ts ./quartz.config.ts
