@@ -1,5 +1,4 @@
-# Startseite 
-
-
-[[Welten/index]]
-- [[Welten/Wizard City/index]]
+---
+title: Welten
+---
+Hier beginnt dein eigentlicher Inhalt für die Welten.
