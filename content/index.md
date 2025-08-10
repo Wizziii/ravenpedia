@@ -1,5 +1,5 @@
 # Startseite 
 
 
-[[Welten]]
-- [[Wizard City]]
+[[Welten/index]]
+- [[Welten/Wizard City/index]]
