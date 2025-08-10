@@ -1,3 +1,4 @@
-# Wizard City
-
-Ich bin ein Ordner für Wizard City.
+---
+title: Wizard City
+---
+Hier beginnt der eigentlicher Inhalt für Wizard City.
