@@ -1,5 +1,7 @@
 ---
 title: Die Spirale
+aliases:
+  - Spirale
 ---
 Die Spirale ist das magische Netz, das sämtliche Welten in Wizard101 verbindet – ein Universum fragmentierter Welten, die durch mächtige Kräfte zusammengehalten werden.
 
@@ -43,6 +45,6 @@ Die Akademiewelt [[Welten/Wysteria/index|Wysteria]] ist die Heimat des Pigswick-
 
 > [!Info] Easter-Egg
 > 
-> In der Spiralkammer im [[Turm des Schulleiters]] kannst du eine schwebende 3D-Darstellung der gesamten [[Spirale]] sehen. Die Projektion zeigt alle bekannten Welten und ist über die Weltenhalle zugänglich. Manche Hauptquests führen dich hierher, um neue Welten freizuschalten oder wichtige NPCs zu treffen.
+> In der Spiralkammer im [[Turm des Schulleiters]] kannst du eine schwebende 3D-Darstellung der gesamten Spirale sehen. Die Projektion zeigt alle bekannten Welten und ist über die Weltenhalle zugänglich. Manche Hauptquests führen dich hierher, um neue Welten freizuschalten oder wichtige NPCs zu treffen.
 > 
-> ![[Photo Wizard City-Stadtmitte-2025-08-10-22-31-01.jpg]]
+> ![[20250810_Spirale_TurmDesSchulleiters.jpg]]
