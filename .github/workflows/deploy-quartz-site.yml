@@ -32,7 +32,7 @@ jobs:
           
           # 2. Copy the .git folder from the root repo to preserve Git history in the quartz folder
           echo "Copying .git folder to quartz..."
-          cp -r ../.git ./quartz/.git
+          cp -r .git ./quartz/.git
           
           # 3. Navigate into the cloned directory
           cd quartz
