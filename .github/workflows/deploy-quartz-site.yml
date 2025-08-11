@@ -29,28 +29,31 @@ jobs:
           echo "Cloning Quartz repository..."
           git clone https://github.com/jackyzha0/quartz.git
 
-          echo "Removing cloned quartz .git to avoid conflict..."
+          echo "Remove cloned quartz .git to avoid conflict..."
           rm -rf quartz/.git
 
           echo "Copying .git folder from root repo to quartz..."
           cp -r .git quartz/.git
 
-          echo "Cloning content repo inside quartz/content to preserve git history..."
+          echo "Copying content folder from root repo into quartz/content..."
           rm -rf quartz/content
-          git clone https://github.com/Wizziii/ravenpedia.git quartz/content
+          cp -r content quartz/content
 
-          echo "Copying config files from the repository root..."
-          cp ./quartz.config.ts ./quartz/quartz.config.ts
-          cp ./quartz.layout.ts ./quartz/quartz.layout.ts
+          echo "Copying config files into quartz root..."
+          cp quartz.config.ts quartz.layout.ts quartz/
 
           cd quartz
+
+          echo "Check git status inside quartz..."
+          git status
+
           echo "Installing dependencies..."
           npm install
 
           echo "Building site..."
           npx quartz build
 
-          echo "Moving built files to destination..."
+          echo "Moving built files to _site folder at root..."
           mkdir -p ../_site
           mv ./public/* ../_site
 
