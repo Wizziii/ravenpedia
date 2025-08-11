@@ -37,7 +37,7 @@ jobs:
 
           echo "Cloning content repo inside quartz/content to preserve git history..."
           rm -rf quartz/content
-          git clone https://github.com/<DEIN-CONTENT-REPO>.git quartz/content
+          git clone https://github.com/Wizziii/ravenpedia.git quartz/content
 
           echo "Copying config files from the repository root..."
           cp ./quartz.config.ts ./quartz/quartz.config.ts
