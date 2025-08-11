@@ -26,36 +26,41 @@ jobs:
 
       - name: Install and Build Quartz
         run: |
-            # 1. Clone the official Quartz repository, as this contains the build tooling.
-            echo "Cloning Quartz repository..."
-            git clone https://github.com/jackyzha0/quartz.git
-            
-            # 2. Navigate into the cloned directory
-            cd quartz
-            
-            # 3. Install the project dependencies
-            echo "Installing dependencies..."
-            npm install
-            
-            # 4. Replace the default content and configuration with your own files.
-            echo "Copying content from the '../content' folder..."
-            rm -rf ./content/*
-            # FIXED: Copies from your new 'content' folder at the repository root.
-            cp -r ../content/* ./content/
-            
-            echo "Copying config files from the repository root..."
-            # FIXED: Copies the config files directly from the repository root.
-            cp ../quartz.config.ts ./quartz.config.ts
-            cp ../quartz.layout.ts ./quartz.layout.ts
-            
-            # 5. Build the site. The output is generated in a 'public' directory.
-            echo "Building site..."
-            npx quartz build
-            
-            # 6. Move the built site to the '_site' directory at the repository root.
-            echo "Moving built files to destination..."
-            mkdir -p ../_site
-            mv ./public/* ../_site
+          # 1. Clone the official Quartz repository, as this contains the build tooling.
+          echo "Cloning Quartz repository..."
+          git clone https://github.com/jackyzha0/quartz.git
+          
+          # 2. Copy the .git folder from the root repo to preserve Git history in the quartz folder
+          echo "Copying .git folder to quartz..."
+          cp -r ../.git ./quartz/.git
+          
+          # 3. Navigate into the cloned directory
+          cd quartz
+          
+          # 4. Check git status to verify the .git folder was copied correctly
+          git status
+          
+          # 5. Install the project dependencies
+          echo "Installing dependencies..."
+          npm install
+          
+          # 6. Replace the default content and configuration with your own files.
+          echo "Copying content from the '../content' folder..."
+          rm -rf ./content/*
+          cp -r ../content/* ./content/
+          
+          echo "Copying config files from the repository root..."
+          cp ../quartz.config.ts ./quartz.config.ts
+          cp ../quartz.layout.ts ./quartz.layout.ts
+          
+          # 7. Build the site. The output is generated in a 'public' directory.
+          echo "Building site..."
+          npx quartz build
+          
+          # 8. Move the built site to the '_site' directory at the repository root.
+          echo "Moving built files to destination..."
+          mkdir -p ../_site
+          mv ./public/* ../_site
 
       - name: Verify build folder contents
         run: |
