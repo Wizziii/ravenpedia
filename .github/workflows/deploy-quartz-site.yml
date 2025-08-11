@@ -60,7 +60,7 @@ jobs:
       - name: Verify build folder contents
         run: |
           echo "Listing _site folder contents"
-          ls -alh ./_site
+          ls -R ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
