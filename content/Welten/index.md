@@ -47,4 +47,4 @@ Die Akademiewelt [[Welten/Wysteria/index|Wysteria]] ist die Heimat des Pigswick-
 > 
 > In der Spiralkammer im [[Turm des Schulleiters]] kannst du eine schwebende 3D-Darstellung der gesamten Spirale sehen. Die Projektion zeigt alle bekannten Welten und ist über die Weltenhalle zugänglich. Manche Hauptquests führen dich hierher, um neue Welten freizuschalten oder wichtige NPCs zu treffen.
 > 
-> ![[20250810_Spirale_TurmDesSchulleiters.jpg]]
+> ![Spirale](20250810_Spirale_TurmDesSchulleiters.jpg)
