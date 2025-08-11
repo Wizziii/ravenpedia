@@ -59,7 +59,6 @@ const customSort: Options["sortFn"] = (a, b) => {
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
-    Component.ArticleTitle(),
     beforeBody: [
         Component.Breadcrumbs(),
         Component.ArticleTitle(),
