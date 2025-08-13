@@ -1,0 +1,9 @@
+# override-list.txt
+# All files in content folder
+content/
+
+# Specific override files
+overrides/quartz/styles/custom.scss
+overrides/quartz.config.ts
+overrides/quartz.layout.ts
+
