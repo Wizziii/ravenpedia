@@ -1,0 +1,12 @@
+@use "./base.scss";
+
+
+// Mermaid styling
+code.mermaid svg{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+pre:has(code.mermaid) button.clipboard-button {
+  display: none;
+}
