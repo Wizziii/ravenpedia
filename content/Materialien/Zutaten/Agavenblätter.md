@@ -3,11 +3,12 @@ title: Agavenblätter
 school: Sturm
 rank: "6"
 card discription: Ein paar Agavenblätter
-rarity: Normal
-auctionable: Ja
-tradeable: Ja
+rarity: 
+auctionable: true
+tradeable: true
 sell price: 2 Gold
 tags:
+  - Materialien
   - Zutat
 ---
 Wenn du Agavenblätter sammelst oder als Drop bekommst, besteht eine Chance, dass du zusätzlich direkt [[Agavensaft]] erhältst.
@@ -24,49 +25,49 @@ Wenn du Agavenblätter sammelst oder als Drop bekommst, besteht eine Chance, das
 
 > [!info]+ Kauf bei
 > 
-[[Branjo Nebelhorn]]
-[[Elik Silberfaust]]
-oder im [[Basar]]
+> [[Branjo Nebelhorn]]
+> [[Elik Silberfaust]]
+> oder im [[Basar]]
 
 > [!info]+ Drops von Gegnern
 > 
-Folgende Gegner können Agavenblätter fallen lassen:
+> Folgende Gegner können Agavenblätter fallen lassen:
 > 
-[[Assistentin Si-am]]
-[[Baron Fellkonnen]]
-[[Baumeister Antheemius]]
-[[Boa-Constructor]]
-[[Die Ratte]]
-[[Elementar der Leere]]
-[[Feldwebel Tenni'syn]]
-[[Gefängnisleiter Hamidou]]
-[[Geist der Intoleranz]]
-[[Hauptmann Zubkow]]
-[[Inspektor Exacteur]]
-[[Lautloser Säbel]]
-[[Leibwache des Barons]]
-[[Murdak]]
-[[Ra]]
-[[Sandhexe]]
-[[Schrift des Rätsels]]
-[[Stratoviper]]
-[[Tolli]]
-[[Vipern-Soldat]]
-[[Wachbrigadier]]
-[[Wachen von Haus Triqholor (Balance)]]
-[[Wüthon]]
-[[Yakhal-Eisbewahrer]]
-[[Löweneule (Feuer)]]
-[[Stehaufbot]]
-[[Bürgermeister Grill]]
-[[Maisdrescher]]
+> [[Assistentin Si-am]]
+> [[Baron Fellkonnen]]
+> [[Baumeister Antheemius]]
+> [[Boa-Constructor]]
+> [[Die Ratte]]
+> [[Elementar der Leere]]
+> [[Feldwebel Tenni'syn]]
+> [[Gefängnisleiter Hamidou]]
+> [[Geist der Intoleranz]]
+> [[Hauptmann Zubkow]]
+> [[Inspektor Exacteur]]
+> [[Lautloser Säbel]]
+> [[Leibwache des Barons]]
+> [[Murdak]]
+> [[Ra]]
+> [[Sandhexe]]
+> [[Schrift des Rätsels]]
+> [[Stratoviper]]
+> [[Tolli]]
+> [[Vipern-Soldat]]
+> [[Wachbrigadier]]
+> [[Wachen von Haus Triqholor (Balance)]]
+> [[Wüthon]]
+> [[Yakhal-Eisbewahrer]]
+> [[Löweneule (Feuer)]]
+> [[Stehaufbot]]
+> [[Bürgermeister Grill]]
+> [[Maisdrescher]]
   
 > [!info]+ Drops von Pflanzen
 > 
-[[Ultra-Kreiselbeere]]
-[[Ultra-Höllifantenohren]]
-[[Ultra-Rumpelpilzchen]]
-[[Ultra-Trompetenranke]]
+> [[Ultra-Kreiselbeere]]
+> [[Ultra-Höllifantenohren]]
+> [[Ultra-Rumpelpilzchen]]
+> [[Ultra-Trompetenranke]]
 ### Transmutation
 
 Kann zu [[Agavensaft]] transmutiert werden. Rezept ist kaufbar bei [[Popol Vuh Weißpapier]] in [[Welten/Azteka/index|Azteka]] in der Region [[Alto Alto]].
