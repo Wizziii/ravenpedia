@@ -3,6 +3,10 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "discription": "text"
+    "discription": "text",
+    "tradeable": "checkbox",
+    "auctionable": "checkbox",
+    "rarity": "multitext",
+    "rank": "number"
   }
 }
