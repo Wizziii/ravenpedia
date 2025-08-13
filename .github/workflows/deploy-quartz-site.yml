@@ -29,12 +29,6 @@ jobs:
           echo "Cloning Quartz repository..."
           git clone https://github.com/jackyzha0/quartz.git
 
-          echo "Remove cloned quartz .git to avoid conflict..."
-          rm -rf quartz/.git
-
-          echo "Copying .git folder from root repo to quartz..."
-          cp -r .git quartz/.git
-
           echo "Copying content folder from root repo into quartz/content..."
           rm -rf quartz/content
           cp -r content quartz/content
