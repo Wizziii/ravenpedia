@@ -40,12 +40,12 @@ jobs:
           cp -r content quartz/content
 
           echo "Applying configuration overrides..."
-          rsync -av quartzOverrides/ quartz/
+          rsync -avi quartzOverrides/ quartz/
 
           cd quartz
 
-          echo "Check git status inside quartz..."
-          git status
+        ##echo "Check git status inside quartz..."
+        ## git status
 
           echo "Installing dependencies..."
           npm install
