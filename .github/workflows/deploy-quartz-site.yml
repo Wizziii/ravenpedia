@@ -39,8 +39,8 @@ jobs:
           rm -rf quartz/content
           cp -r content quartz/content
 
-          echo "Copying config files into quartz root..."
-          cp quartz.config.ts quartz.layout.ts quartz/
+          echo "Applying configuration overrides..."
+          rsync -av quartzOverrides/ quartz/
 
           cd quartz
 
