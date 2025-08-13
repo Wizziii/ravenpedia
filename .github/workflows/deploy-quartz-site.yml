@@ -44,9 +44,6 @@ jobs:
 
           cd quartz
 
-        ##echo "Check git status inside quartz..."
-        ## git status
-
           echo "Installing dependencies..."
           npm install
 
