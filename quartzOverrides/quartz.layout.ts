@@ -1,6 +1,5 @@
 import {PageLayout, SharedLayout} from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import {Options} from "./quartz/components/Explorer"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -9,53 +8,46 @@ export const sharedPageComponents: SharedLayout = {
     afterBody: [],
     footer: Component.Footer({
         links: {
-            GitHub: "https://github.com/jackyzha0/quartz",
-            "Discord Community": "https://discord.gg/cRFFHYye7t",
+            "Impressum": "/impressum",
+            "Datenschutz": "/datenschutz",
+            "Discord-Community": "https://discord.gg/9VeHUXx8",
         },
     }),
 }
 
-// Define your custom sort function
-const customSort: Options["sortFn"] = (a, b) => {
-    // Define the desired order of your files/folders by their display name
-    const pinnedOrder = ["Grundlagen", "Die Spirale", "Magieschulen"]; // Case-sensitive
+const explorerConfig = Component.Explorer({
+    filterFn: (node) => {
 
-    const aName = a.displayName;
-    const bName = b.displayName;
+        // Exclude specific nodes from the explorer
+        const omit = new Set([
+            "impressum",
+            "datenschutz"
+        ]);
 
-    const aIndex = pinnedOrder.indexOf(aName);
-    const bIndex = pinnedOrder.indexOf(bName);
+        return !omit.has(node.displayName.toLowerCase());
+    },
+    sortFn: (a, b) => {
 
-    // If both are in the pinned list, sort by their defined order
-    if (aIndex > -1 && bIndex > -1) {
-        return aIndex - bIndex;
-    }
+        // Custom sort order for specific nodes
 
-    // If only 'a' is pinned, it should come first
-    if (aIndex > -1) {
-        return -1;
-    }
+        const order = [
+            "grundlagen",
+            "die spirale"
+        ];
 
-    // If only 'b' is pinned, it should come first
-    if (bIndex > -1) {
-        return 1;
-    }
+        const nameA = a.displayName.toLowerCase();
+        const nameB = b.displayName.toLowerCase();
 
-    // Fallback for folders first, then alphabetical for everything else
-    if (a.isFolder && !b.isFolder) {
-        return -1;
-    }
-    if (!a.isFolder && b.isFolder) {
-        return 1;
-    }
+        const indexA = order.indexOf(nameA);
+        const indexB = order.indexOf(nameB);
 
-    // Default alphabetical sort for non-pinned items
-    return aName.localeCompare(bName, undefined, {
-        numeric: true,
-        sensitivity: "base",
-    });
-};
+        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+        if (indexA !== -1) return -1;
+        if (indexB !== -1) return 1;
 
+        return nameA.localeCompare(nameB);
+    },
+});
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
@@ -70,9 +62,7 @@ export const defaultContentPageLayout: PageLayout = {
         Component.MobileOnly(Component.Spacer()),
         Component.Search(),
         Component.Darkmode(),
-        Component.DesktopOnly(Component.Explorer({
-            sortFn: customSort,
-        })),
+        Component.DesktopOnly(explorerConfig),
     ],
     right: [
         Component.Graph(),
@@ -94,9 +84,7 @@ export const defaultListPageLayout: PageLayout = {
         Component.MobileOnly(Component.Spacer()),
         Component.Search(),
         Component.Darkmode(),
-        Component.DesktopOnly(Component.Explorer({
-            sortFn: customSort,
-        })),
+        Component.DesktopOnly(explorerConfig),
     ],
     right: [
         Component.Graph(),
