@@ -1,6 +1,3 @@
----
-hiddenFromExplorer: true
----
 Christian Kretschmer  
 c/o Ragdrasil UG (haftungsbeschränkt)  
 Kipsdorferstraße 110  
