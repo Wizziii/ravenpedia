@@ -2,7 +2,7 @@
 title: Wasserwerk
 tags:
   - Dungeon
-  - "#WizardCity"
+  - WizardCity
   - Krabbengasse
 aliases:
   - Waterworks
