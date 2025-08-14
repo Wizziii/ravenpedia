@@ -8,23 +8,33 @@ export const sharedPageComponents: SharedLayout = {
     afterBody: [],
     footer: Component.Footer({
         links: {
-            GitHub: "https://github.com/jackyzha0/quartz",
-            "Discord Community": "https://discord.gg/cRFFHYye7t",
+            "Impressum": "/impressum",
+            "Datenschutz": "/datenschutz",
+            "Discord-Community": "https://discord.gg/9VeHUXx8",
         },
     }),
 }
 
 const explorerConfig = Component.Explorer({
     filterFn: (node) => {
+
+        // Exclude specific nodes from the explorer
         const omit = new Set([
             "impressum",
             "datenschutz"
         ]);
+
         return !omit.has(node.displayName.toLowerCase());
     },
     sortFn: (a, b) => {
+
+        // Custom sort order for specific nodes
+
         const order = [
-            "grundlagen", "die spirale"];
+            "grundlagen",
+            "die spirale"
+        ];
+
         const nameA = a.displayName.toLowerCase();
         const nameB = b.displayName.toLowerCase();
 
