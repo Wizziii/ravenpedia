@@ -8,17 +8,16 @@ export const sharedPageComponents: SharedLayout = {
     afterBody: [],
     footer: Component.Footer({
         links: {
-            "Impressum": "/Impressum",
-            "Datenschutz": "/Datenschutz",
+            "Impressum": "https://ravenpedia.xyz/Impressum",
+            "Datenschutz": "https://ravenpedia.xyz/Datenschutz",
             "Discord-Community": "https://discord.gg/9VeHUXx8",
         },
     }),
 }
 
 const explorerConfig = Component.Explorer({
-    // Start with an empty list
-    initialNodes: [],
     filterFn: (node) => {
+
         // Exclude specific nodes from the explorer
         const omit = new Set([
             "impressum",
@@ -28,7 +27,9 @@ const explorerConfig = Component.Explorer({
         return !omit.has(node.displayName.toLowerCase());
     },
     sortFn: (a, b) => {
+
         // Custom sort order for specific nodes
+
         const order = [
             "grundlagen",
             "die spirale"
@@ -46,16 +47,6 @@ const explorerConfig = Component.Explorer({
 
         return nameA.localeCompare(nameB);
     },
-    // Function to clear existing nodes and add new ones
-    buildNodes: (allNodes) => {
-        const newNodes: typeof allNodes = [];
-        allNodes.forEach(node => {
-            if (!["impressum", "datenschutz"].includes(node.displayName.toLowerCase())) {
-                newNodes.push(node);
-            }
-        });
-        return newNodes;
-    }
 });
 
 // components for pages that display a single page (e.g. a single note)
