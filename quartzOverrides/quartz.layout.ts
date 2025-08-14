@@ -17,37 +17,10 @@ export const sharedPageComponents: SharedLayout = {
 
 const explorerConfig = Component.Explorer({
     filterFn: (node) => {
-
-        // Exclude specific nodes from the explorer
-        const omit = new Set([
-            "impressum",
-            "datenschutz"
-        ]);
-
-        return !omit.has(node.displayName.toLowerCase());
+        const omit = new Set(["impressum", "datenschutz"]) // Exclude specific nodes from the explorer
+        return !omit.has(node.displayName.toLowerCase())
     },
-    sortFn: (a, b) => {
-
-        // Custom sort order for specific nodes
-
-        const order = [
-            "grundlagen",
-            "die spirale"
-        ];
-
-        const nameA = a.displayName.toLowerCase();
-        const nameB = b.displayName.toLowerCase();
-
-        const indexA = order.indexOf(nameA);
-        const indexB = order.indexOf(nameB);
-
-        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-        if (indexA !== -1) return -1;
-        if (indexB !== -1) return 1;
-
-        return nameA.localeCompare(nameB);
-    },
-});
+})
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
