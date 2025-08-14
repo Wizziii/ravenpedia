@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
     afterBody: [],
     footer: Component.Footer({
         links: {
-            "Impressum": "https://ravenpedia.xyz/Impressum",
-            "Datenschutz": "https://ravenpedia.xyz/Datenschutz",
+            "Impressum": "Impressum",
+            "Datenschutz": "Datenschutz",
             "Discord-Community": "https://discord.gg/9VeHUXx8",
         },
     }),
