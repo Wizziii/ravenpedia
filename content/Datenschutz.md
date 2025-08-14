@@ -1,6 +1,3 @@
----
-hiddenFromExplorer: true
----
 **Verantwortliche Stelle**  
 Christian Kretschmer  
 c/o Ragdrasil UG (haftungsbeschränkt)  
