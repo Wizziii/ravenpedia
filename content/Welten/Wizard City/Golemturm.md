@@ -1,5 +1,5 @@
 ---
-title: 
+title: Golemturm
 tags:
   - WizardCity
 ---
