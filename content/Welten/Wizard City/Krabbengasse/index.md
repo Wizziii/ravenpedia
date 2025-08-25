@@ -1,5 +1,5 @@
 ---
-title: 
+title: Krabbengasse
 tags:
   - WizardCity
 ---
