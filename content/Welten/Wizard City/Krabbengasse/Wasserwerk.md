@@ -6,13 +6,12 @@ tags:
   - Krabbengasse
 aliases:
   - Waterworks
-area price: 750 Kronen
 ---
-Das Wasserwerk ist ein legendärer Dungeon für Spieler auf Level 60, welcher sich in [[Welten/Wizard City/index|Wizard City]] in der [[Krabbengasse]] befindet. In den Anfangszeiten von Wizard101 stellte es den End-Content-Dungeon des Spiels dar. Er ist als Mehrspieler-Dungeon ausgelegt und für ein volles Team von vier Zauberern empfohlen – vor allem, weil die Kämpfe im Inneren ohne gute Absprache und Teamarbeit sehr fordernd sind.
+Das Wasserwerk ist ein legendärer Dungeon für Spieler auf Level 60, welcher sich in [[Welten/Wizard City/index|Wizard City]] in der [[Welten/Wizard City/Krabbengasse/index|Krabbengasse]] befindet. In den Anfangszeiten von Wizard101 stellte es den End-Content-Dungeon des Spiels dar. Er ist als Mehrspieler-Dungeon ausgelegt und für ein volles Team von vier Zauberern empfohlen – vor allem, weil die Kämpfe im Inneren ohne gute Absprache und Teamarbeit sehr fordernd sind.
 
 ![[Picture 2025-08-13 14-33-28.jpg]]
 
-Unter der [[Krabbengasse]] verläuft ein System alter Zugangstunnel. Diese Tunnel wurden von einer Bande von Raufbolden aus unbekannten Gründen aufgebrochen, was dazu führte, dass der Wasserdruck rapide schwankte und Probleme sowohl für die [[Krabbengasse]] selbst als auch für die Anwohner der [[Tritonstraße]] an der Oberfläche verursachte. Als Reaktion darauf ruft [[Bruno Rabenaug]]die Legendären Zauberer um Hilfe. Diese werden schließlich von [[Herrmann]] zu einem beschädigten Zugangsturm geführt, wodurch sie den Eindringlingen ins Innere folgen können.
+Unter der [[Welten/Wizard City/Krabbengasse/index|Krabbengasse]] verläuft ein System alter Zugangstunnel. Diese Tunnel wurden von einer Bande von Raufbolden aus unbekannten Gründen aufgebrochen, was dazu führte, dass der Wasserdruck rapide schwankte und Probleme sowohl für die [[Welten/Wizard City/Krabbengasse/index|Krabbengasse]] selbst als auch für die Anwohner der [[Tritonstraße]] an der Oberfläche verursachte. Als Reaktion darauf ruft [[Bruno Rabenaug]]die Legendären Zauberer um Hilfe. Diese werden schließlich von [[Herrmann]] zu einem beschädigten Zugangsturm geführt, wodurch sie den Eindringlingen ins Innere folgen können.
 
 ![[Picture 2025-08-13 14-34-31.jpg]]
 
@@ -87,7 +86,7 @@ Im Anschluss beginnt die Quest [[Tintenfrisch]]. Zurück im Hauptraum angekommen
 
 > [!info]- Inhalt von „In der Muschelklemme“
 > 
-> Bevor die Lichter verglühen, öffne alle blauebn Muscheln, um eine Belohnung zu erhalten. Gelbe Muscheln dagegen bringen Unglück.
+> Bevor die Lichter verglühen, öffne alle blauen Muscheln, um eine Belohnung zu erhalten. Gelbe Muscheln dagegen bringen Unglück.
 
 Bei Erfolg erhaltet ihr Zugang zum nächsten Raum und es spawnen Lebenskugeln. Scheitert ihr, müsst ihr gegen vier [[Schimmernder Geist|Schimmernde Geister]] kämpfen. In Raum 4 wartet [[Luska Talismund]] auf euch. Die Regeln und Cheats von [[Luska Talismund]] findest du im Eintrag von ihm.
 
@@ -162,3 +161,19 @@ Es folgt der finale Kampf gegen [[Sylster Glitzerstrom]] mit Unterstützung durc
 > „Na warte, man sieht sich immer zweimal!“
 
 Am Ende des Dungeons erscheint die Wasserwerk-Truhe. Das Öffnen kostet beim ersten Öffnen 50 Kronen und ermöglicht einen zusätzlichen Beutezug aus der Belohnungsliste des Dungeons.
+
+---
+## Wasserwerk-Rüstung
+
+Die Wasserwerk-Rüstung gehört zu den begehrtesten Ausrüstungssets für Zauberer um Stufe 60. Sie besteht aus **Hut**, **Robe** und **Stiefeln** für jede Schule und zeichnet sich durch starke Werte in den Bereichen Schaden, Resistenz und kritischer Block aus. Damit ist sie eine der besten Optionen in diesem Levelbereich und wird oft als „Pflicht-Set“ vor dem Übergang in höhere Welten angesehen.
+### Drop-Quellen
+
+- **Hut**: [[Luska Talismund]]
+- **Robe** und Stiefel: [[Sylster Glitzerstrom]]
+### Farmstrategien
+
+Das Farmen der Wasserwerk-Rüstung kann sehr zeitaufwendig sein. Ein gängiger Trick ist der sogenannte **Respawn-Glitch**: Wenn alle Spielenden nach dem Sieg über [[Sylster Glitzerstrom]] im Hauptraum bleiben und **eine Spielerin oder ein Spieler kurz einen anderen Raum betritt und wieder zurückkehrt**, erscheinen alle Endbosse erneut. 
+
+Auf diese Weise lassen sich die Drops mehrmals in einem einzigen Dungeon-Durchlauf farmen.
+
+**Wichtig:** Die Gruppe muss aus **vier Spielenden** bestehen, da der Respawn sonst nicht zuverlässig funktioniert.
